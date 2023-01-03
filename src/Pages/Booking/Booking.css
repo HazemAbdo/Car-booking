@@ -1,0 +1,66 @@
+.booking-page {
+  height: 900px;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+.right-part {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  background-color: aqua;
+}
+/* .cars {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px;
+  width: 75%;
+  height: 83%;
+
+  background-color: aqua;
+}
+.filters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 644px;
+  position: absolute;
+  width: 1029px;
+  height: 44px;
+  left: 278px;
+  top: 177px;
+  background-color: blue;
+}
+.header {
+  position: absolute;
+  width: 116px;
+  height: 39px;
+  left: 278px;
+  top: 108px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 39px;
+  color: #242731;
+  background-color: red;
+}
+.top-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 31px;
+  gap: 10px;
+  position: absolute;
+  width: 1090px;
+  height: 78px;
+  left: 249px;
+  top: 0px;
+  background: #ffffff;
+  background-color: violet;
+} */
