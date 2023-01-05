@@ -1,5 +1,3 @@
-import { useState } from "react";
-import "./App.css";
 import Booking from "./Pages/Booking/Booking";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const App = () => {

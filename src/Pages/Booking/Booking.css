@@ -1,66 +1,74 @@
 .booking-page {
-  height: 900px;
+  width: 100vw;
   display: grid;
   grid-template-columns: 1fr 5fr;
 }
 
 .right-part {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
-  background-color: aqua;
 }
-/* .cars {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.cars {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
   padding: 0px;
-  gap: 24px;
-  width: 75%;
-  height: 83%;
-
-  background-color: aqua;
+  width: 95%;
+  margin-left: 3%;
+  margin-bottom: 1%;
 }
 .filters {
+  margin-left: 3%;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0px;
-  gap: 644px;
-  position: absolute;
-  width: 1029px;
+  gap: 75%;
+  width: 95%;
   height: 44px;
-  left: 278px;
-  top: 177px;
-  background-color: blue;
+}
+.filters-left {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  width: 281px;
+  height: 36px;
+}
+select {
+  padding: 10px 20px;
+  width: 122px;
+  height: 40px;
+  font-size: 15px;
+  color: #242731;
+  background: #ffffff;
+  border-radius: 22.5px;
+  border: 1px solid #e0e0e0;
+}
+.filters-right {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: center;
+  padding: 0px;
+  gap: 16px;
+  width: 104px;
+  height: 44px;
+}
+.filters-right svg:hover {
+  cursor: pointer;
 }
 .header {
-  position: absolute;
+  margin-left: 3%;
   width: 116px;
   height: 39px;
-  left: 278px;
-  top: 108px;
-  font-family: "DM Sans";
-  font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 39px;
   color: #242731;
-  background-color: red;
 }
-.top-bar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 31px;
-  gap: 10px;
-  position: absolute;
-  width: 1090px;
-  height: 78px;
-  left: 249px;
-  top: 0px;
-  background: #ffffff;
-  background-color: violet;
-} */

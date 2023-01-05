@@ -1,0 +1,130 @@
+.car-card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 10px;
+  width: 310px;
+  height: 250px;
+  border-radius: 16px;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: auto;
+  gap: 21px;
+  width: 277px;
+  height: 219px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 4px;
+  width: 277px;
+  height: 49px;
+}
+
+.name-favorite {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  gap: 36px;
+  width: 277px;
+  height: 24px;
+}
+.car-name {
+  width: 184px;
+  height: 23px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #242731;
+}
+.type {
+  width: 50px;
+  height: 21px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #72767c;
+}
+
+.car-image {
+  width: 233px;
+  height: 105px;
+  margin-left: 10px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 100px;
+  width: 277px;
+  height: 23px;
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 18px;
+  width: 131px;
+  height: 23px;
+}
+
+.passenger {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 4px;
+  width: 35px;
+  height: 23px;
+}
+.passenger-number {
+  width: 11px;
+  height: 23px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #72767c;
+}
+.manual {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 5px;
+  width: 78px;
+  height: 21px;
+}
+.manual-text {
+  width: 53px;
+  height: 21px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #72767c;
+}
+.price {
+  width: 65px;
+  height: 23px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #242731;
+}

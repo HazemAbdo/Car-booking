@@ -1,15 +1,15 @@
 import "./Sidebar.css";
-import Assets from "./Icons/Assets";
-import Booking from "./Icons/Booking";
-import Buy from "./Icons/Buy";
-import Calendar from "./Icons/Calendar";
-import Dashboard from "./Icons/Dashboard";
-import Logo from "./Icons/Logo";
-import Logout from "./Icons/Logout";
-import Messages from "./Icons/Messages";
-import Sell from "./Icons/Sell";
-import Services from "./Icons/Services";
-import Settings from "./Icons/Settings";
+import Assets from "../../assets/Icons/Assets";
+import Booking from "../../assets/Icons/Booking";
+import Buy from "../../assets/Icons/Buy";
+import Calendar from "../../assets/Icons/Calendar";
+import Dashboard from "../../assets/Icons/Dashboard";
+import Logo from "../../assets/Icons/Logo";
+import Logout from "../../assets/Icons/Logout";
+import Messages from "../../assets/Icons/Messages";
+import Sell from "../../assets/Icons/Sell";
+import Services from "../../assets/Icons/Services";
+import Settings from "../../assets/Icons/Settings";
 const contentIcons = [
   {
     icon: <Dashboard />,

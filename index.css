@@ -1,0 +1,11 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  font-family: "DM Sans";
+  font-style: normal;
+  overflow-x: hidden;
+  background: #f5f4f6;
+}
