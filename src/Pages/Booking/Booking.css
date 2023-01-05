@@ -1,4 +1,5 @@
 .booking-page {
+  height: 100%;
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr 5fr;
@@ -14,7 +15,6 @@
 .cars {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
   gap: 20px;
   padding: 0px;
   width: 95%;

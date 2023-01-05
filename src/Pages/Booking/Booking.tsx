@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Filter from "../../assets/Icons/Filter";
 import Grid from "../../assets/Icons/Grid";
 import Carcard from "../../Components/Carcard/Carcard";
@@ -17,6 +16,14 @@ const cars = [
   {
     carName: "Porshe 718 Cayman S",
     carType: "Coupe",
+    carImage: "src\\assets\\Images\\car1.png",
+    passengerNumber: 4,
+    manual: true,
+    price: "400$",
+  },
+  {
+    carName: "Porshe 718 Cayman S",
+    carType: "Coupe",
     carImage: "src\\assets\\Images\\car2.png",
     passengerNumber: 4,
     manual: true,
@@ -62,23 +69,10 @@ const cars = [
     manual: true,
     price: "400$",
   },
-  {
-    carName: "Porshe 718 Cayman S",
-    carType: "Coupe",
-    carImage: "src\\assets\\Images\\car3.png",
-    passengerNumber: 4,
-    manual: true,
-    price: "400$",
-  },
 ];
+
 const Booking: React.FC = () => {
-  useEffect(() => {
-    if (cars.length <= 8) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "scroll";
-    }
-  }, [cars.length]);
+  const numberRows = Math.ceil(cars.length / 4);
   return (
     <div className="booking-page">
       <Sidebar />
@@ -101,7 +95,12 @@ const Booking: React.FC = () => {
             <Filter />
           </div>
         </div>
-        <div className="cars">
+        <div
+          className="cars"
+          style={{
+            gridTemplateRows: `repeat(${numberRows}, 1fr)`,
+          }}
+        >
           {cars.map((car) => (
             <Carcard
               carName={car.carName}

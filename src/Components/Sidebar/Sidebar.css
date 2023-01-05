@@ -56,6 +56,7 @@
   width: 174px;
   height: 34px;
   border-radius: 6px;
+  font-size: 18px;
 }
 .content:hover {
   background-color: #f2f2f2;

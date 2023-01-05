@@ -1,0 +1,29 @@
+div.dashboard-page {
+  height: 100%;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+div.dashboard-page div.right-part {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+div.dashboard-page div.right-part div.cards-list {
+  width: 95%;
+  height: 25%;
+  margin-left: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+div.dashboard-page div.right-part div.statistics {
+}
+
+div.dashboard-page div.right-part div.recommendations {
+}

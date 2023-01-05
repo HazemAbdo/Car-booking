@@ -1,0 +1,30 @@
+.percentage-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 60px;
+  width: 232px;
+  height: 266px;
+  border-radius: 14px;
+}
+
+.percentage-card-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.percentage-card-icon {
+  height: 38px;
+}
+.percentage-card-top .percentage-card-title {
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+}
