@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-const Breakfluid: FunctionComponent = () => {
+const BreakFluid: FunctionComponent = () => {
   return (
     <svg
       width="38"
@@ -17,4 +17,4 @@ const Breakfluid: FunctionComponent = () => {
   );
 };
 
-export default Breakfluid;
+export default BreakFluid;

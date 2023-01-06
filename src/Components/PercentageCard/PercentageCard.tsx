@@ -1,9 +1,9 @@
 import { FunctionComponent } from "react";
-import Breakfluid from "../../assets/Icons/Breakfluid";
-import Circlepercentage from "../../assets/Icons/Circlepercentage";
+import BreakFluid from "../../assets/Icons/BreakFluid";
+import CirclePercentage from "../../assets/Icons/CirclePercentage";
 import Energy from "../../assets/Icons/Energy";
 import Range from "../../assets/Icons/Range";
-import Tirewear from "../../assets/Icons/Tirewear";
+import TireWear from "../../assets/Icons/TireWear";
 import "./PercentageCard.css";
 interface PercentageProps {
   percentage: number;
@@ -12,6 +12,7 @@ interface PercentageProps {
   textColor: string;
   circleColor: string;
   title: string;
+  kilometers?: number;
 }
 
 const PercentageCard: FunctionComponent<PercentageProps> = ({
@@ -21,16 +22,17 @@ const PercentageCard: FunctionComponent<PercentageProps> = ({
   textColor,
   circleColor,
   title,
+  kilometers,
 }) => {
   const icon =
     iconName === "Energy" ? (
       <Energy />
     ) : iconName === "Range" ? (
       <Range />
-    ) : iconName === "Breakfluid" ? (
-      <Breakfluid />
+    ) : iconName === "BreakFluid" ? (
+      <BreakFluid />
     ) : (
-      <Tirewear />
+      <TireWear />
     );
   return (
     <div
@@ -53,7 +55,11 @@ const PercentageCard: FunctionComponent<PercentageProps> = ({
         </div>
       </div>
       <div className="circle-percentage">
-        <Circlepercentage percentage={percentage} color={circleColor} />
+        <CirclePercentage
+          percentage={percentage}
+          color={circleColor}
+          kilometers={kilometers}
+        />
       </div>
     </div>
   );

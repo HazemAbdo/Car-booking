@@ -1,6 +1,6 @@
 import Filter from "../../assets/Icons/Filter";
 import Grid from "../../assets/Icons/Grid";
-import Carcard from "../../Components/Carcard/Carcard";
+import CarCard from "../../Components/CarCard/CarCard";
 import Navbar from "../../Components/Navbar/Navbar";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import "./Booking.css";
@@ -102,7 +102,7 @@ const Booking: React.FC = () => {
           }}
         >
           {cars.map((car) => (
-            <Carcard
+            <CarCard
               carName={car.carName}
               carType={car.carType}
               carImage={car.carImage}

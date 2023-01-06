@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-const Tirewear: FunctionComponent = () => {
+const TireWear: FunctionComponent = () => {
   return (
     <svg
       width="38"
@@ -19,4 +19,4 @@ const Tirewear: FunctionComponent = () => {
   );
 };
 
-export default Tirewear;
+export default TireWear;

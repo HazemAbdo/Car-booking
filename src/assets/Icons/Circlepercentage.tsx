@@ -1,13 +1,15 @@
 import { FunctionComponent } from "react";
 
-interface CirclepercentageProps {
+interface CirclePercentageProps {
   percentage: number;
   color: string;
+  kilometers?: number;
 }
 
-const Circlepercentage: FunctionComponent<CirclepercentageProps> = ({
+const CirclePercentage: FunctionComponent<CirclePercentageProps> = ({
   percentage,
   color,
+  kilometers,
 }) => {
   return (
     <svg
@@ -37,10 +39,10 @@ const Circlepercentage: FunctionComponent<CirclepercentageProps> = ({
         stroke-dasharray={`${100 - percentage} ,100`}
       />
       <text x="18" y="20.35" text-anchor="middle" fill={color} font-size="8">
-        {percentage}%
+        {kilometers ? `${kilometers}K` : `${percentage}%`}
       </text>
     </svg>
   );
 };
 
-export default Circlepercentage;
+export default CirclePercentage;

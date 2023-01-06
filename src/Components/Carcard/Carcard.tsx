@@ -1,9 +1,8 @@
 import Love from "../../assets/Icons/Love";
 import Manual from "../../assets/Icons/Manual";
 import Passenger from "../../assets/Icons/Passenger";
-import "./Carcard.css";
-
-interface CarcardProps {
+import "./CarCard.css";
+interface CarCardProps {
   carName?: string;
   carType?: string;
   carImage?: string;
@@ -12,16 +11,15 @@ interface CarcardProps {
   price?: string;
 }
 
-const Carcard: React.FC<CarcardProps> = ({
+const CarCard: React.FC<CarCardProps> = ({
   carName = "Porshe 718 Cayman S",
   carType = "Coupe",
   carImage = "src\\assets\\Images\\car.png",
   passengerNumber = 4,
   manual = true,
-  price = "400$",
+  price = "400$"
 }) => {
-  return (
-    <div className="car-card">
+  return <div className="car-card">
       <div className="card-content">
         <div className="title">
           <div className="name-favorite">
@@ -47,8 +45,7 @@ const Carcard: React.FC<CarcardProps> = ({
           </p>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
 
-export default Carcard;
+export default CarCard;
