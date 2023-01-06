@@ -1,0 +1,93 @@
+.recommend-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 27px;
+  gap: 10px;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 14px;
+}
+.recommend-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 11px;
+  width: 264px;
+  height: fit-content;
+}
+
+.recommend-card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 170px;
+  height: 24px;
+}
+
+.recommendation-percentage {
+  white-space: nowrap;
+  width: 136px;
+  height: 21px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: #242731;
+}
+
+.recommend-card-car-image {
+  width: 257px;
+  height: 106px;
+}
+
+.recommend-card-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: 264px;
+  height: fit-content;
+}
+
+.recommend-card-name {
+  width: 264px;
+  height: 26px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: #1f2128;
+}
+
+.recommend-card-icons-price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 105px;
+  width: 264px;
+  height: 20px;
+}
+
+.recommend-card-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  width: 120px;
+  height: 20px;
+}
+
+.recommend-card-price {
+  width: fit-content;
+  height: 18px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #72767c;
+}

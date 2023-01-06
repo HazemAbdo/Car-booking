@@ -2,6 +2,7 @@ import { FunctionComponent } from "react";
 import ContinuousGraph from "../../Components/ContinuousGrapgh/ContinuousGrapgh";
 import Navbar from "../../Components/Navbar/Navbar";
 import PercentageCard from "../../Components/PercentageCard/PercentageCard";
+import RecommendCard from "../../Components/RecommendCard/RecommendCard";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import VerticalBarChart from "../../Components/VerticalBarChart/VerticalBarChart";
 import "./Dashboard.css";
@@ -49,6 +50,31 @@ const Dashboard: FunctionComponent = () => {
         <div className="statistics">
           <VerticalBarChart />
           <ContinuousGraph />
+        </div>
+        <div className="recommendations">
+          <RecommendCard
+            carName="BMW 3 Series"
+            numberKilometers={156}
+            pricePerHour="20"
+          />
+          <RecommendCard
+            carName="BMW 3 Series"
+            numberKilometers={200}
+            pricePerHour="20"
+            backgroundColor="#E3ECF1"
+          />
+          <RecommendCard
+            carName="BMW 3 Series"
+            numberKilometers={304}
+            pricePerHour="20"
+            backgroundColor="#F4E3E5"
+          />
+          <RecommendCard
+            carName="BMW 3 Series"
+            numberKilometers={500}
+            pricePerHour="20"
+            backgroundColor="#E1DFA4"
+          />
         </div>
       </div>
     </div>

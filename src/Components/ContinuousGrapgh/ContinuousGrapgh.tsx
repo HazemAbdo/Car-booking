@@ -108,7 +108,7 @@ const ContinuousGraph: FunctionComponent = () => {
                 key={button}
                 onClick={() => setDataType(button)}
                 className={`${
-                  button === dataType ? "active" : ""
+                  button === dataType ? "active-continuos" : ""
                 } continuous-graph-button`}
               >
                 {button}
