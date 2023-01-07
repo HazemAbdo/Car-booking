@@ -1,11 +1,10 @@
-import { FC, useState } from "react";
+import { FC, useContext } from "react";
 import Notification from "../../assets/Icons/Notification";
+import { DarkThemeContext } from "../../Contexts/DarkThemeContext";
 import "./Navbar.css";
-interface NavbarProps {
-  isDarkMode: boolean;
-  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
-}
-const Navbar: FC<NavbarProps> = ({ isDarkMode, setIsDarkMode }) => {
+
+const Navbar: FC = () => {
+  const { isDarkMode, setIsDarkMode } = useContext(DarkThemeContext);
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };

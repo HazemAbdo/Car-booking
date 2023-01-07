@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useContext } from "react";
 import "./ContinuousGraph.css";
 import {
   Chart as ChartJS,
@@ -11,6 +11,7 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
+import { DarkThemeContext } from "../../Contexts/DarkThemeContext";
 
 ChartJS.register(
   CategoryScale,
@@ -28,12 +29,8 @@ const weekDummyData = [15, 10, 30, 20, 25, 30, 35];
 const monthsLabels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"];
 const dummyMonthData = [50, 60, 150, 80, 40, 100, 110];
 const buttons = ["Day", "Week", "Month"];
-interface ContinuousGraphProps {
-  isDarkMode: boolean;
-}
-const ContinuousGraph: FunctionComponent<ContinuousGraphProps> = ({
-  isDarkMode,
-}) => {
+const ContinuousGraph: FunctionComponent = () => {
+  const { isDarkMode } = useContext(DarkThemeContext);
   const [dataType, setDataType] = React.useState("Day");
   const currentLabel =
     dataType === "Day"

@@ -1,6 +1,8 @@
+import { useContext } from "react";
 import Love from "../../assets/Icons/Love";
 import Manual from "../../assets/Icons/Manual";
 import Passenger from "../../assets/Icons/Passenger";
+import { DarkThemeContext } from "../../Contexts/DarkThemeContext";
 import "./CarCard.css";
 interface CarCardProps {
   carName?: string;
@@ -9,7 +11,6 @@ interface CarCardProps {
   passengerNumber?: number;
   manual?: boolean;
   price?: string;
-  isDarkMode?: boolean;
 }
 
 const CarCard: React.FC<CarCardProps> = ({
@@ -19,8 +20,8 @@ const CarCard: React.FC<CarCardProps> = ({
   passengerNumber = 4,
   manual = true,
   price = "400$",
-  isDarkMode,
 }) => {
+  const { isDarkMode } = useContext(DarkThemeContext);
   return (
     <div
       className="car-card"

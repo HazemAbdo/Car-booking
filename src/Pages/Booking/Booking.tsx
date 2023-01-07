@@ -1,8 +1,10 @@
+import { useContext } from "react";
 import Filter from "../../assets/Icons/Filter";
 import Grid from "../../assets/Icons/Grid";
 import CarCard from "../../Components/CarCard/CarCard";
 import Navbar from "../../Components/Navbar/Navbar";
 import Sidebar from "../../Components/Sidebar/Sidebar";
+import { DarkThemeContext } from "../../Contexts/DarkThemeContext";
 import "./Booking.css";
 const cars = [
   {
@@ -70,22 +72,19 @@ const cars = [
     price: "400$",
   },
 ];
-interface BookingProps {
-  isDarkMode: boolean;
-  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
-}
-const Booking: React.FC<BookingProps> = ({ isDarkMode, setIsDarkMode }) => {
+const Booking: React.FC = () => {
+  const { isDarkMode } = useContext(DarkThemeContext);
   const numberRows = Math.ceil(cars.length / 4);
   return (
     <div className="booking-page">
-      <Sidebar isDarkMode={isDarkMode} />
+      <Sidebar />
       <div
         className="right-part"
         style={{
           backgroundColor: isDarkMode ? " #1F2128" : "#f5f4f6",
         }}
       >
-        <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+        <Navbar />
         <p
           className="header"
           style={{
@@ -138,7 +137,6 @@ const Booking: React.FC<BookingProps> = ({ isDarkMode, setIsDarkMode }) => {
               passengerNumber={car.passengerNumber}
               manual={car.manual}
               price={car.price}
-              isDarkMode={isDarkMode}
             />
           ))}
         </div>

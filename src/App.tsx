@@ -2,21 +2,18 @@ import Booking from "./Pages/Booking/Booking";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import { useState } from "react";
+import { DarkThemeContextProvider } from "./Contexts/DarkThemeContext";
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const router = createBrowserRouter(
     [
       {
-        path: "/",
-        element: (
-          <Booking isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-        ),
+        path: "/booking",
+        element: <Booking />,
       },
       {
         path: "/dashboard",
-        element: (
-          <Dashboard isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-        ),
+        element: <Dashboard />,
       },
     ],
     {
@@ -24,7 +21,11 @@ const App = () => {
     }
   );
 
-  return <RouterProvider router={router}></RouterProvider>;
+  return (
+    <DarkThemeContextProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </DarkThemeContextProvider>
+  );
 };
 
 export default App;

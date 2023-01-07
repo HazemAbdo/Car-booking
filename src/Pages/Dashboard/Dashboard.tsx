@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useContext } from "react";
 import ContinuousGraph from "../../Components/ContinuousGraph/ContinuousGraph";
 import Navbar from "../../Components/Navbar/Navbar";
 import PercentageCard from "../../Components/PercentageCard/PercentageCard";
@@ -6,24 +6,19 @@ import RecommendCard from "../../Components/RecommendCard/RecommendCard";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import VerticalBarChart from "../../Components/VerticalBarChart/VerticalBarChart";
 import "./Dashboard.css";
-interface DashboardProps {
-  isDarkMode: boolean;
-  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
-}
-const Dashboard: FunctionComponent<DashboardProps> = ({
-  isDarkMode,
-  setIsDarkMode,
-}) => {
+import { DarkThemeContext } from "../../Contexts/DarkThemeContext";
+const Dashboard: FunctionComponent = () => {
+  const { isDarkMode } = useContext(DarkThemeContext);
   return (
     <div className="dashboard-page">
-      <Sidebar isDarkMode={isDarkMode} />
+      <Sidebar />
       <div
         className="right-part"
         style={{
           backgroundColor: isDarkMode ? "#1F2128" : "#f5f4f6",
         }}
       >
-        <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+        <Navbar />
         <div className="cards-list">
           <PercentageCard
             percentage={45}
@@ -60,8 +55,8 @@ const Dashboard: FunctionComponent<DashboardProps> = ({
           />
         </div>
         <div className="statistics">
-          <VerticalBarChart isDarkMode={isDarkMode} />
-          <ContinuousGraph isDarkMode={isDarkMode} />
+          <VerticalBarChart />
+          <ContinuousGraph />
         </div>
         <div className="recommendations">
           <RecommendCard

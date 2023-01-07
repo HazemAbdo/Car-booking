@@ -10,7 +10,9 @@ import Messages from "../../assets/Icons/Messages";
 import Sell from "../../assets/Icons/Sell";
 import Services from "../../assets/Icons/Services";
 import Settings from "../../assets/Icons/Settings";
-import { FC } from "react";
+import { FC, useContext } from "react";
+import { DarkThemeContext } from "../../Contexts/DarkThemeContext";
+import { useNavigate } from "react-router-dom";
 const contentIcons = [
   {
     icon: <Dashboard />,
@@ -55,10 +57,10 @@ const bottomIcons = [
     text: "Logout",
   },
 ];
-interface SidebarProps {
-  isDarkMode: boolean;
-}
-const Sidebar: FC<SidebarProps> = ({ isDarkMode }) => {
+
+const Sidebar: FC = () => {
+  const { isDarkMode } = useContext(DarkThemeContext);
+  const navigate = useNavigate();
   return (
     <div
       className="sidebar"
@@ -81,7 +83,19 @@ const Sidebar: FC<SidebarProps> = ({ isDarkMode }) => {
           </div>
           <div className="contents">
             {contentIcons.map((content) => (
-              <div className={`content ${content.text}`} key={content.text}>
+              <div
+                className={`content ${content.text}`}
+                key={content.text}
+                //if content==Booking navigate to booking page
+                //else go to dashboard
+                onClick={() => {
+                  if (content.text === "Booking") {
+                    navigate("/booking");
+                  } else {
+                    navigate("/dashboard");
+                  }
+                }}
+              >
                 {content.icon}
                 <div
                   className="text"
