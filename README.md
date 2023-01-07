@@ -32,7 +32,7 @@ $ npm run dev
 * I decided not to use UI libraries like Bootstrap or material UI to have more flexibility in mocking our Figma design.
 * I decided to use chart.js instead of amcharts as the last one only supports react in the old-fashioned class component and I want to make all of my components in the functional style.
 * I decided to make SVGs as components not as files so I can add logic and customizations to them.
-* I decided to encapsulate all the data in a dummy file in the assets directory so instead of hardcoding the data I fetch them from this file so we can easily integrate with real APIs.
+* I decided to encapsulate all the data in a dummy file in the assets directory then I fetch them and passing them as props so we can easily integrate with real APIs in the future without changing the components code.
 
 # Built With
 <div align="center">
@@ -71,7 +71,7 @@ https://user-images.githubusercontent.com/59124058/211166760-0531f55a-2d48-4354-
 
 - [ ] Reach 100% testing coverage
 - [ ] Reach 100% accessibility 
-- [ ] Reach 100% accessibility   
+- [ ] Reach 100% responsiveness   
   
 # Project Structure
 ```
