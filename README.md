@@ -54,6 +54,9 @@ $ npm run dev
 ![dashboard](https://user-images.githubusercontent.com/59124058/211134194-48a4e080-6b3e-4620-9e3d-596a736b1954.png)
 ![dashboard-dark](https://user-images.githubusercontent.com/59124058/211134197-28638a97-6051-49da-acb8-91fecc25d8bf.png)
 
+# Quick Tour
+https://user-images.githubusercontent.com/59124058/211166760-0531f55a-2d48-4354-af33-4690980990d1.mp4
+
 # Testing Coverage
 ![testCoverage](https://user-images.githubusercontent.com/59124058/211163897-90bcc3ed-52fe-487d-a817-9400e8c1324a.png)
 
