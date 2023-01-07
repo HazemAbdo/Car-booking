@@ -1,7 +1,38 @@
-# Project Title
-Vekelz front-end task
+# Vekelz front-end task
+
+# 🏁 Get Started
+
+### Installation
+
+1. **_Clone the repository_**
+
+```sh
+git clone https://github.com/HazemAbdo/Vekelz-Task.git Vekelz-Task
+```
+
+2. **_Navigate to repository directory_**
+
+```sh
+$ cd Vekelz-Task
+```
+
+3. **_Install dependencies_**
+
+```sh
+$ npm install
+```
+
+4. **_Run the Client_**
+
+```sh
+$ npm run dev
+```
 
 # Design Decisions
+* I decided not to use UI libraries like Bootstrap or material UI to have more flexibility in mocking our Figma design.
+* I decided to use chart.js instead of amcharts as the last one only supports react in the old-fashioned class component and I want to make all of my components in the functional style.
+* I decided to make SVGs as components not as files so I can add logic and customizations to them.
+* I decided to encapsulate all the data in a dummy file in the assets directory so instead of hardcoding the data I fetch them from this file so we can easily integrate with real APIs.
 
 # Built With
 <div align="center">
@@ -23,17 +54,41 @@ Vekelz front-end task
 ![dashboard](https://user-images.githubusercontent.com/59124058/211134194-48a4e080-6b3e-4620-9e3d-596a736b1954.png)
 ![dashboard-dark](https://user-images.githubusercontent.com/59124058/211134197-28638a97-6051-49da-acb8-91fecc25d8bf.png)
 
-# Quick Tour
+# Testing Coverage
+![testCoverage](https://user-images.githubusercontent.com/59124058/211163897-90bcc3ed-52fe-487d-a817-9400e8c1324a.png)
 
+# Done ✓
+
+- [x] Dashboard component
+- [x] Booking component
+- [x] dark theme
+- [x] basic unit testing 
+
+# More optimizations
+
+- [ ] Reach 100% testing coverage
+- [ ] Reach 100% accessibility 
+- [ ] Reach 100% accessibility   
+  
 # Project Structure
 ```
+|───public
+└───src
+    ├───assets
+    │   ├───DummyData
+    │   ├───Icons
+    │   └───Images
+    ├───Components
+    │   ├───CarCard
+    │   ├───ContinuousGraph
+    │   ├───Navbar
+    │   ├───PercentageCard
+    │   ├───RecommendCard
+    │   ├───Sidebar
+    │   └───VerticalBarChart
+    ├───Contexts
+    ├───Pages
+    │   ├───Booking
+    │   └───Dashboard
+    └───__tests__
 ```
-### Done ✓
-
-- [x] Create my first TODO.md  
-
-### Todo
-
-- [ ] Work on the website ~3d #feat @john 2020-03-20  
-- [ ] Fix the homepage ~1d #bug @jane  
-  - [ ] Sub-task or description  
