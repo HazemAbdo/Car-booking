@@ -20,7 +20,7 @@ div.dashboard-page div.right-part {
   margin-left: 3%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .statistics {

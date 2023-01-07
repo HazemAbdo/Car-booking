@@ -8,12 +8,13 @@
 }
 .sidebar-content {
   padding-left: 20px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 174px;
   justify-content: space-between;
-  height: 98%;
+  height: 90%;
 }
 .sidebar-content-top {
   display: flex;

@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import ContinuousGraph from "../../Components/ContinuousGrapgh/ContinuousGrapgh";
+import ContinuousGraph from "../../Components/ContinuousGraph/ContinuousGraph";
 import Navbar from "../../Components/Navbar/Navbar";
 import PercentageCard from "../../Components/PercentageCard/PercentageCard";
 import RecommendCard from "../../Components/RecommendCard/RecommendCard";

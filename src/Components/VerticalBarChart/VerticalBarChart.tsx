@@ -85,13 +85,14 @@ const VerticalBarChart: FunctionComponent = () => {
         </p>
         <div className="vertical-bar-buttons-text">
           <div className="vertical-bar-buttons">
-            {buttons.map((button) => (
+            {buttons.map((button, index) => (
               <button
                 key={button}
                 onClick={() => setDataType(button)}
                 className={`${
                   button === dataType ? "active" : ""
-                } vertical-bar-button`}
+                } vertical-bar-button
+                `}
               >
                 {button}
               </button>
