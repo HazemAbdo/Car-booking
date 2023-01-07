@@ -1,9 +1,13 @@
 import { describe, it, expect } from "vitest";
 import { render } from "@testing-library/react";
 import Booking from "../Pages/Booking/Booking";
-
+import { BrowserRouter } from "react-router-dom";
 describe("Booking main page correctly", async () => {
-  const { container } = render(<Booking />);
+  const { container } = render(
+    <BrowserRouter>
+      <Booking />
+    </BrowserRouter>
+  );
   it("sidebar is visible", async () => {
     expect(container.querySelector(".sidebar")).toBeTruthy();
   });

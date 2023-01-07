@@ -1,9 +1,14 @@
 import { describe, it, expect } from "vitest";
 import { render } from "@testing-library/react";
 import Dashboard from "../Pages/Dashboard/Dashboard";
+import { BrowserRouter } from "react-router-dom";
 
 describe("Renders main page correctly", async () => {
-  const { container } = render(<Dashboard />);
+  const { container } = render(
+    <BrowserRouter>
+      <Dashboard />
+    </BrowserRouter>
+  );
   it("sidebar is visible", async () => {
     expect(container.querySelector(".sidebar")).toBeTruthy();
   });

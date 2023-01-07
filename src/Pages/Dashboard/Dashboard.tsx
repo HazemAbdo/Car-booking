@@ -14,7 +14,7 @@ import {
 const Dashboard: FunctionComponent = () => {
   const { isDarkMode } = useContext(DarkThemeContext);
   const percentageCardsData = getDummyPercentageCardsData(isDarkMode);
-  const recommendCardsData = getDummyRecommendCardsData(isDarkMode);
+  const recommendCardsData = getDummyRecommendCardsData();
   return (
     <div className="dashboard-page">
       <Sidebar />
@@ -35,6 +35,7 @@ const Dashboard: FunctionComponent = () => {
               title={percentageCardData.title}
               iconName={percentageCardData.iconName}
               kilometers={percentageCardData.kilometers}
+              key={Math.random()}
             />
           ))}
         </div>
@@ -49,6 +50,7 @@ const Dashboard: FunctionComponent = () => {
               numberKilometers={recommendCardData.numberKilometers}
               pricePerHour={recommendCardData.pricePerHour}
               backgroundColor={recommendCardData.backgroundColor}
+              key={Math.random()}
             />
           ))}
         </div>

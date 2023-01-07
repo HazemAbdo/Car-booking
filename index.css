@@ -4,8 +4,9 @@ body,
   margin: 0px;
   padding: 0px;
   height: 100%;
-  width: 100%;
+  width: 100vw;
   font-family: "DM Sans";
   font-style: normal;
   overflow-x: hidden;
+  background-color: #f5f5f5;
 }

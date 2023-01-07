@@ -73,6 +73,7 @@ const Booking: React.FC = () => {
               passengerNumber={car.passengerNumber}
               manual={car.manual}
               price={car.price}
+              key={Math.random()}
             />
           ))}
         </div>
