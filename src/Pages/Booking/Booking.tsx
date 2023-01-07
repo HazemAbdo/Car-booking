@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { getDummyCarsData } from "../../assets/DummyData/DummyData";
 import Filter from "../../assets/Icons/Filter";
 import Grid from "../../assets/Icons/Grid";
 import CarCard from "../../Components/CarCard/CarCard";
@@ -6,73 +7,8 @@ import Navbar from "../../Components/Navbar/Navbar";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import { DarkThemeContext } from "../../Contexts/DarkThemeContext";
 import "./Booking.css";
-const cars = [
-  {
-    carName: "Porshe 718 Cayman S",
-    carType: "Coupe",
-    carImage: "src\\assets\\Images\\car1.png",
-    passengerNumber: 4,
-    manual: true,
-    price: "400$",
-  },
-  {
-    carName: "Porshe 718 Cayman S",
-    carType: "Coupe",
-    carImage: "src\\assets\\Images\\car1.png",
-    passengerNumber: 4,
-    manual: true,
-    price: "400$",
-  },
-  {
-    carName: "Porshe 718 Cayman S",
-    carType: "Coupe",
-    carImage: "src\\assets\\Images\\car2.png",
-    passengerNumber: 4,
-    manual: true,
-    price: "400$",
-  },
-  {
-    carName: "Porshe 718 Cayman S",
-    carType: "Coupe",
-    carImage: "src\\assets\\Images\\car3.png",
-    passengerNumber: 4,
-    manual: true,
-    price: "400$",
-  },
-  {
-    carName: "Porshe 718 Cayman S",
-    carType: "Coupe",
-    carImage: "src\\assets\\Images\\car1.png",
-    passengerNumber: 4,
-    manual: true,
-    price: "400$",
-  },
-  {
-    carName: "Porshe 718 Cayman S",
-    carType: "Coupe",
-    carImage: "src\\assets\\Images\\car2.png",
-    passengerNumber: 4,
-    manual: true,
-    price: "400$",
-  },
-  {
-    carName: "Porshe 718 Cayman S",
-    carType: "Coupe",
-    carImage: "src\\assets\\Images\\car3.png",
-    passengerNumber: 4,
-    manual: true,
-    price: "400$",
-  },
-  {
-    carName: "Porshe 718 Cayman S",
-    carType: "Coupe",
-    carImage: "src\\assets\\Images\\car2.png",
-    passengerNumber: 4,
-    manual: true,
-    price: "400$",
-  },
-];
 const Booking: React.FC = () => {
+  const cars = getDummyCarsData();
   const { isDarkMode } = useContext(DarkThemeContext);
   const numberRows = Math.ceil(cars.length / 4);
   return (

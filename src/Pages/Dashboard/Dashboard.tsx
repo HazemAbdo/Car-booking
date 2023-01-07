@@ -7,8 +7,14 @@ import Sidebar from "../../Components/Sidebar/Sidebar";
 import VerticalBarChart from "../../Components/VerticalBarChart/VerticalBarChart";
 import "./Dashboard.css";
 import { DarkThemeContext } from "../../Contexts/DarkThemeContext";
+import {
+  getDummyPercentageCardsData,
+  getDummyRecommendCardsData,
+} from "../../assets/DummyData/DummyData";
 const Dashboard: FunctionComponent = () => {
   const { isDarkMode } = useContext(DarkThemeContext);
+  const percentageCardsData = getDummyPercentageCardsData(isDarkMode);
+  const recommendCardsData = getDummyRecommendCardsData(isDarkMode);
   return (
     <div className="dashboard-page">
       <Sidebar />
@@ -20,68 +26,31 @@ const Dashboard: FunctionComponent = () => {
       >
         <Navbar />
         <div className="cards-list">
-          <PercentageCard
-            percentage={45}
-            cardColor="#A162F7"
-            textColor="#FFFFFF"
-            circleColor="#FFFFFF"
-            title="Energy"
-            iconName="Energy"
-          />
-          <PercentageCard
-            percentage={60}
-            cardColor={isDarkMode ? "#242731" : "#FFFFFF"}
-            textColor={isDarkMode ? "#FFFFFF" : "#000000"}
-            circleColor="#FF7E86"
-            title="Range"
-            iconName="Range"
-            kilometers={156}
-          />
-          <PercentageCard
-            percentage={9}
-            cardColor={isDarkMode ? "#242731" : "#FFFFFF"}
-            textColor={isDarkMode ? "#FFFFFF" : "#000000"}
-            circleColor="#A162F7"
-            title="Break Fluid"
-            iconName="BreakFluid"
-          />
-          <PercentageCard
-            percentage={25}
-            cardColor={isDarkMode ? "#242731" : "#FFFFFF"}
-            textColor={isDarkMode ? "#FFFFFF" : "#000000"}
-            circleColor="#F6CC0D"
-            title="Tier Water"
-            iconName="Tierwater"
-          />
+          {percentageCardsData.map((percentageCardData) => (
+            <PercentageCard
+              percentage={percentageCardData.percentage}
+              cardColor={percentageCardData.cardColor}
+              textColor={percentageCardData.textColor}
+              circleColor={percentageCardData.circleColor}
+              title={percentageCardData.title}
+              iconName={percentageCardData.iconName}
+              kilometers={percentageCardData.kilometers}
+            />
+          ))}
         </div>
         <div className="statistics">
           <VerticalBarChart />
           <ContinuousGraph />
         </div>
         <div className="recommendations">
-          <RecommendCard
-            carName="BMW 3 Series"
-            numberKilometers={156}
-            pricePerHour="20"
-          />
-          <RecommendCard
-            carName="BMW 3 Series"
-            numberKilometers={200}
-            pricePerHour="20"
-            backgroundColor="#E3ECF1"
-          />
-          <RecommendCard
-            carName="BMW 3 Series"
-            numberKilometers={304}
-            pricePerHour="20"
-            backgroundColor="#F4E3E5"
-          />
-          <RecommendCard
-            carName="BMW 3 Series"
-            numberKilometers={500}
-            pricePerHour="20"
-            backgroundColor="#E1DFA4"
-          />
+          {recommendCardsData.map((recommendCardData) => (
+            <RecommendCard
+              carName={recommendCardData.carName}
+              numberKilometers={recommendCardData.numberKilometers}
+              pricePerHour={recommendCardData.pricePerHour}
+              backgroundColor={recommendCardData.backgroundColor}
+            />
+          ))}
         </div>
       </div>
     </div>
