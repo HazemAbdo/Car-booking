@@ -41,7 +41,7 @@
   width: 200px;
   height: 48px;
 }
-.notification-avatar svg:hover {
+.notification-avatar img:hover {
   cursor: pointer;
 }
 .avatar {
