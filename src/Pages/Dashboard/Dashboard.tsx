@@ -6,12 +6,24 @@ import RecommendCard from "../../Components/RecommendCard/RecommendCard";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import VerticalBarChart from "../../Components/VerticalBarChart/VerticalBarChart";
 import "./Dashboard.css";
-const Dashboard: FunctionComponent = () => {
+interface DashboardProps {
+  isDarkMode: boolean;
+  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+}
+const Dashboard: FunctionComponent<DashboardProps> = ({
+  isDarkMode,
+  setIsDarkMode,
+}) => {
   return (
     <div className="dashboard-page">
-      <Sidebar />
-      <div className="right-part">
-        <Navbar />
+      <Sidebar isDarkMode={isDarkMode} />
+      <div
+        className="right-part"
+        style={{
+          backgroundColor: isDarkMode ? "#1F2128" : "#f5f4f6",
+        }}
+      >
+        <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
         <div className="cards-list">
           <PercentageCard
             percentage={45}
@@ -23,8 +35,8 @@ const Dashboard: FunctionComponent = () => {
           />
           <PercentageCard
             percentage={60}
-            cardColor="#FFFFFF"
-            textColor="#000000"
+            cardColor={isDarkMode ? "#242731" : "#FFFFFF"}
+            textColor={isDarkMode ? "#FFFFFF" : "#000000"}
             circleColor="#FF7E86"
             title="Range"
             iconName="Range"
@@ -32,24 +44,24 @@ const Dashboard: FunctionComponent = () => {
           />
           <PercentageCard
             percentage={9}
-            cardColor="#FFFFFF"
-            textColor="#000000"
+            cardColor={isDarkMode ? "#242731" : "#FFFFFF"}
+            textColor={isDarkMode ? "#FFFFFF" : "#000000"}
             circleColor="#A162F7"
             title="Break Fluid"
             iconName="BreakFluid"
           />
           <PercentageCard
             percentage={25}
-            cardColor="#FFFFFF"
-            textColor="#000000"
+            cardColor={isDarkMode ? "#242731" : "#FFFFFF"}
+            textColor={isDarkMode ? "#FFFFFF" : "#000000"}
             circleColor="#F6CC0D"
             title="Tier Water"
             iconName="Tierwater"
           />
         </div>
         <div className="statistics">
-          <VerticalBarChart />
-          <ContinuousGraph />
+          <VerticalBarChart isDarkMode={isDarkMode} />
+          <ContinuousGraph isDarkMode={isDarkMode} />
         </div>
         <div className="recommendations">
           <RecommendCard

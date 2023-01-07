@@ -70,22 +70,51 @@ const cars = [
     price: "400$",
   },
 ];
-
-const Booking: React.FC = () => {
+interface BookingProps {
+  isDarkMode: boolean;
+  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+}
+const Booking: React.FC<BookingProps> = ({ isDarkMode, setIsDarkMode }) => {
   const numberRows = Math.ceil(cars.length / 4);
   return (
     <div className="booking-page">
-      <Sidebar />
-      <div className="right-part">
-        <Navbar />
-        <p className="header">Booking</p>
+      <Sidebar isDarkMode={isDarkMode} />
+      <div
+        className="right-part"
+        style={{
+          backgroundColor: isDarkMode ? " #1F2128" : "#f5f4f6",
+        }}
+      >
+        <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+        <p
+          className="header"
+          style={{
+            color: isDarkMode ? "white" : "black",
+          }}
+        >
+          Booking
+        </p>
         <div className="filters">
           <div className="filters-left">
-            <select name="state" id="state">
+            <select
+              name="state"
+              id="state"
+              style={{
+                backgroundColor: isDarkMode ? "#242731" : "#FFFFFF",
+                color: isDarkMode ? "white" : "black",
+              }}
+            >
               <option value="">New</option>
               <option value="">Old</option>
             </select>
-            <select name="brand" id="brand">
+            <select
+              name="brand"
+              id="brand"
+              style={{
+                backgroundColor: isDarkMode ? "#242731" : "#FFFFFF",
+                color: isDarkMode ? "white" : "black",
+              }}
+            >
               <option value="">Porshe</option>
               <option value="">BMW</option>
             </select>
@@ -109,6 +138,7 @@ const Booking: React.FC = () => {
               passengerNumber={car.passengerNumber}
               manual={car.manual}
               price={car.price}
+              isDarkMode={isDarkMode}
             />
           ))}
         </div>

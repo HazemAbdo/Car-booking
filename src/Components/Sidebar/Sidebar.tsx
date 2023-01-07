@@ -10,6 +10,7 @@ import Messages from "../../assets/Icons/Messages";
 import Sell from "../../assets/Icons/Sell";
 import Services from "../../assets/Icons/Services";
 import Settings from "../../assets/Icons/Settings";
+import { FC } from "react";
 const contentIcons = [
   {
     icon: <Dashboard />,
@@ -54,20 +55,42 @@ const bottomIcons = [
     text: "Logout",
   },
 ];
-const Sidebar = () => {
+interface SidebarProps {
+  isDarkMode: boolean;
+}
+const Sidebar: FC<SidebarProps> = ({ isDarkMode }) => {
   return (
-    <div className="sidebar">
+    <div
+      className="sidebar"
+      style={{
+        backgroundColor: isDarkMode ? "#242731" : "white",
+      }}
+    >
       <div className="sidebar-content">
         <div className="sidebar-content-top">
           <div className="logo">
             <Logo />
-            <div className="text">Motiv.</div>
+            <div
+              className="text"
+              style={{
+                color: isDarkMode ? "white" : "black",
+              }}
+            >
+              Motiv.
+            </div>
           </div>
           <div className="contents">
             {contentIcons.map((content) => (
               <div className={`content ${content.text}`} key={content.text}>
                 {content.icon}
-                <div className="text">{content.text}</div>
+                <div
+                  className="text"
+                  style={{
+                    color: isDarkMode ? "white" : "black",
+                  }}
+                >
+                  {content.text}
+                </div>
               </div>
             ))}
           </div>
@@ -76,7 +99,14 @@ const Sidebar = () => {
           {bottomIcons.map((content) => (
             <div className={`content ${content.text}`} key={content.text}>
               {content.icon}
-              <div className="text">{content.text}</div>
+              <div
+                className="text"
+                style={{
+                  color: isDarkMode ? "white" : "black",
+                }}
+              >
+                {content.text}
+              </div>
             </div>
           ))}
         </div>

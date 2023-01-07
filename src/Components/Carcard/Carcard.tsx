@@ -9,6 +9,7 @@ interface CarCardProps {
   passengerNumber?: number;
   manual?: boolean;
   price?: string;
+  isDarkMode?: boolean;
 }
 
 const CarCard: React.FC<CarCardProps> = ({
@@ -17,13 +18,27 @@ const CarCard: React.FC<CarCardProps> = ({
   carImage = "src\\assets\\Images\\car.png",
   passengerNumber = 4,
   manual = true,
-  price = "400$"
+  price = "400$",
+  isDarkMode,
 }) => {
-  return <div className="car-card">
+  return (
+    <div
+      className="car-card"
+      style={{
+        backgroundColor: isDarkMode ? "#242731" : "#FFFFFF",
+      }}
+    >
       <div className="card-content">
         <div className="title">
           <div className="name-favorite">
-            <p className="car-name">{carName}</p>
+            <p
+              className="car-name"
+              style={{
+                color: isDarkMode ? "#FFFFFF" : "#000000",
+              }}
+            >
+              {carName}
+            </p>
             <Love />
           </div>
           <p className="type">{carType}</p>
@@ -33,19 +48,39 @@ const CarCard: React.FC<CarCardProps> = ({
           <div className="left">
             <div className="passenger">
               <Passenger />
-              <p className="passenger-number">{passengerNumber}</p>
+              <p
+                className="passenger-number"
+                style={{
+                  color: isDarkMode ? "#FFFFFF" : "#72767C",
+                }}
+              >
+                {passengerNumber}
+              </p>
             </div>
             <div className="manual">
               <Manual />
-              <p className="manual-text">{manual ? "Manual" : "Automatic"}</p>
+              <p
+                className="manual-text"
+                style={{
+                  color: isDarkMode ? "#FFFFFF" : "#72767C",
+                }}
+              >
+                {manual ? "Manual" : "Automatic"}
+              </p>
             </div>
           </div>
-          <p className="price">
+          <p
+            className="price"
+            style={{
+              color: isDarkMode ? "#FFFFFF" : "#72767C",
+            }}
+          >
             <strong>{price}</strong>/d
           </p>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
 
 export default CarCard;

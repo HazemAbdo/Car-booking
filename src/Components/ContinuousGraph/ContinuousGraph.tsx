@@ -21,24 +21,6 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      display: false,
-    },
-  },
-  scales: {
-    y: {
-      ticks: {
-        display: false,
-      },
-      grid: {
-        display: false,
-      },
-    },
-  },
-};
 const dayLabels = ["1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM"];
 const dayDummyData = [5, 6, 7, 3, 4, 5, 6];
 const weekLabels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -46,7 +28,12 @@ const weekDummyData = [15, 10, 30, 20, 25, 30, 35];
 const monthsLabels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"];
 const dummyMonthData = [50, 60, 150, 80, 40, 100, 110];
 const buttons = ["Day", "Week", "Month"];
-const ContinuousGraph: FunctionComponent = () => {
+interface ContinuousGraphProps {
+  isDarkMode: boolean;
+}
+const ContinuousGraph: FunctionComponent<ContinuousGraphProps> = ({
+  isDarkMode,
+}) => {
   const [dataType, setDataType] = React.useState("Day");
   const currentLabel =
     dataType === "Day"
@@ -84,16 +71,52 @@ const ContinuousGraph: FunctionComponent = () => {
       },
     ],
   };
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+    scales: {
+      y: {
+        ticks: {
+          display: false,
+        },
+        grid: {
+          display: false,
+        },
+      },
+      x: {
+        ticks: {
+          color: isDarkMode ? "white" : "#5F6165",
+        },
+        grid: {
+          display: false,
+        },
+      },
+    },
+  };
   return (
-    <div className="continuous-graph-container">
+    <div
+      className="continuous-graph-container"
+      style={{
+        backgroundColor: isDarkMode ? "#242731" : "white",
+      }}
+    >
       <div className="continuous-graph-content">
-        <p className="continuous-graph-title">
+        <p
+          className="continuous-graph-title"
+          style={{
+            color: isDarkMode ? "white" : "black",
+          }}
+        >
           <strong>Car</strong> Statistics
         </p>
         <div className="continuous-graph-buttons-text">
           <p
             style={{
-              color: "#5F6165",
+              color: isDarkMode ? "white" : "#5F6165",
               whiteSpace: "nowrap",
               fontWeight: "700",
               fontSize: "14px",
