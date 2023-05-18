@@ -1,4 +1,4 @@
-# Vekelz front-end task
+# Car booking
 
 # 🏁 Get Started
 
